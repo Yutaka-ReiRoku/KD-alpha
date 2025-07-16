@@ -102,11 +102,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b34023e9edef7246a906b8039f52055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDetector: {fileID: 0}
   projectile: {fileID: 6846731686558122063, guid: b85e64145855e59439258e02444e9f4d, type: 3}
   fireRate: 1
-  fireCooldown: 1
+  fireTimer: 0
+  raycastDistance: 11
   isPlaced: 0
+  safeZoneCollider: {fileID: 0}
+  zombieLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!58 &-1896137880979394530
 CircleCollider2D:
   m_ObjectHideFlags: 0
