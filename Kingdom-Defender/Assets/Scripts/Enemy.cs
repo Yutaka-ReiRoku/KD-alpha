@@ -4,13 +4,21 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     public float health;
-    private float currentHealth;
+    public float currentHealth;
 
     public bool isAttacking = false;
+
+    public Collider2D safeZoneCollider;
 
     void Start()
     {
         currentHealth = health;
+
+        GameObject safeZone = GameObject.FindWithTag("SafeZone");
+        if (safeZone != null)
+        {
+            safeZoneCollider = safeZone.GetComponent<Collider2D>();
+        }
     }
 
     void Update()
@@ -28,6 +36,10 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (IsInSafeZone())
+        {
+            return;
+        }
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
@@ -40,17 +52,28 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    bool IsInSafeZone()
     {
-        if (collision.gameObject.CompareTag("Ally"))
+        Collider2D enemyCollider = GetComponent<Collider2D>();
+        if (safeZoneCollider == null && enemyCollider == null)
+        {
+            return false;
+        }
+
+        return safeZoneCollider.bounds.Intersects(enemyCollider.bounds);
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Ally"))
         {
             isAttacking = true;
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Ally"))
+        if (collider.gameObject.CompareTag("Ally"))
         {
             isAttacking = false;
         }

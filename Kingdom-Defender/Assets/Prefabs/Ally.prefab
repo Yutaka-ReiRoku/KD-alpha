@@ -108,9 +108,11 @@ MonoBehaviour:
   raycastDistance: 11
   isPlaced: 0
   safeZoneCollider: {fileID: 0}
-  zombieLayer:
+  enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  shouldShoot: 0
+  isInSafeZone: 0
 --- !u!58 &-1896137880979394530
 CircleCollider2D:
   m_ObjectHideFlags: 0

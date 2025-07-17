@@ -103,8 +103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  health: 3
+  health: 5
   currentHealth: 0
+  isAttacking: 0
+  safeZoneCollider: {fileID: 0}
 --- !u!58 &7555718941932160026
 CircleCollider2D:
   m_ObjectHideFlags: 0

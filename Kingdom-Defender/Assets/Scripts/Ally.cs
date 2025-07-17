@@ -1,3 +1,4 @@
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class Ally : MonoBehaviour
@@ -9,7 +10,7 @@ public class Ally : MonoBehaviour
     public bool isPlaced = false;
 
     public Collider2D safeZoneCollider;
-    public LayerMask zombieLayer;
+    public LayerMask enemyLayer;
 
     void Start()
     {
@@ -22,6 +23,10 @@ public class Ally : MonoBehaviour
 
     void Update()
     {
+        if (!isPlaced)
+        {
+            return;
+        }
         fireTimer += Time.deltaTime;
 
         if (fireTimer >= fireRate && ShouldShoot())
@@ -33,12 +38,12 @@ public class Ally : MonoBehaviour
 
     bool ShouldShoot()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, raycastDistance, zombieLayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, raycastDistance, enemyLayer);
 
         if (hit.collider != null)
         {
-            GameObject zombie = hit.collider.gameObject;
-            if (!IsInSafeZone(zombie))
+            GameObject enemy = hit.collider.gameObject;
+            if (!IsInSafeZone(enemy))
             {
                 return true;
             }
@@ -46,20 +51,15 @@ public class Ally : MonoBehaviour
         return false;
     }
 
-    bool IsInSafeZone(GameObject zombie)
+    bool IsInSafeZone(GameObject enemy)
     {
-        if (safeZoneCollider == null)
+        Collider2D enemyCollider = enemy.GetComponent<Collider2D>();
+        if (safeZoneCollider == null && enemyCollider == null)
         {
             return false;
         }
 
-        Collider2D zombieCollider = zombie.GetComponent<Collider2D>();
-        if (zombieCollider == null)
-        {
-            return false;
-        }
-
-        return safeZoneCollider.bounds.Intersects(zombieCollider.bounds);
+        return safeZoneCollider.bounds.Intersects(enemyCollider.bounds);
     }
 
     void Shoot()
