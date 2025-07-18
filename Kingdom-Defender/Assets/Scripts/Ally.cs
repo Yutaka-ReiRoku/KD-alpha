@@ -7,13 +7,17 @@ public class Ally : MonoBehaviour
     public float fireRate;
     public float fireTimer;
     public float raycastDistance;
-    public bool isPlaced = false;
-
     public Collider2D safeZoneCollider;
     public LayerMask enemyLayer;
 
+    public float health;
+    public float currentHealth;
+    public bool isPlaced = false;
+
     void Start()
     {
+        currentHealth = health;
+
         GameObject safeZone = GameObject.FindWithTag("SafeZone");
         if (safeZone!= null)
         {
@@ -66,6 +70,21 @@ public class Ally : MonoBehaviour
     {
         Instantiate(projectile, transform.position, Quaternion.identity);
     }
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
+
 
     private void OnDrawGizmos()
     {

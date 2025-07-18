@@ -5,8 +5,12 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float health;
     public float currentHealth;
+    public float damage;
+    public float attackRate;
+    public float attackTimer;
 
     public bool isAttacking = false;
+    public Ally ally;
 
     public Collider2D safeZoneCollider;
 
@@ -26,6 +30,15 @@ public class Enemy : MonoBehaviour
         if (!isAttacking)
         {
             Move();
+        }
+        else if(ally != null)
+        {
+            attackTimer += Time.deltaTime;
+            if (attackTimer >= attackRate)
+            {
+                ally.TakeDamage(damage);
+                attackTimer = 0;
+            }
         }
     }
 
@@ -67,7 +80,11 @@ public class Enemy : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Ally"))
         {
-            isAttacking = true;
+            ally = collider.GetComponent<Ally>();
+            if (ally != null)
+            {
+                isAttacking = true;
+            }
         }
     }
 
