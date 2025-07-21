@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 6846731686558122063, guid: b85e64145855e59439258e02444e9f4d, type: 3}
-  fireRate: 1
+  fireRate: 2
   fireTimer: 0
   raycastDistance: 11
   safeZoneCollider: {fileID: 0}

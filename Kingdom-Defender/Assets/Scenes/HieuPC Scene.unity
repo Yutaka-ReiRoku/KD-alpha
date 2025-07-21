@@ -279,8 +279,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 26131734}
-        m_TargetAssemblyTypeName: CardManager, Assembly-CSharp
-        m_MethodName: SelectCard
+        m_TargetAssemblyTypeName: Card, Assembly-CSharp
+        m_MethodName: OnClickCard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2649,7 +2649,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9433204337cb84ab76785ab53d888a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ally: {fileID: 1413940409423723474, guid: 68908164471341d4680a6b25e374d262, type: 3}
   interact:
     serializedVersion: 2
     m_Bits: 512

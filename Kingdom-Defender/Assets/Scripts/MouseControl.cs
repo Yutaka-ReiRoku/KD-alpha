@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MouseControl : MonoBehaviour
 {
-    public GameObject ally;
+    public static GameObject ally;
     private GameObject temp;
     private GameObject currentPlot;
 
@@ -12,6 +12,8 @@ public class MouseControl : MonoBehaviour
 
     void Update()
     {
+        if (ally == null) return;
+
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, Mathf.Infinity, interact);
         if (hit.collider != null && hit.collider.gameObject.GetComponent<Plot>().isOccupied == false)
@@ -34,6 +36,7 @@ public class MouseControl : MonoBehaviour
                 temp.GetComponent<Ally>().isPlaced = true;
                 hit.collider.gameObject.GetComponent<Plot>().isOccupied = true;
                 temp = null;
+                ally = null;
             }
             else if (hit.collider.gameObject != currentPlot)
             {
