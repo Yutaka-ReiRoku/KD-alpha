@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5734674712342800872}
   - component: {fileID: 177763539004091016}
-  - component: {fileID: 1356469413127669016}
+  - component: {fileID: -1440625378205846623}
   - component: {fileID: -1896137880979394530}
   - component: {fileID: 7086772825393893451}
   m_Layer: 6
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1356469413127669016
+--- !u!114 &-1440625378205846623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,9 +99,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1413940409423723474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b34023e9edef7246a906b8039f52055, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ed46f65153959440a5bdd4d8de55868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 5
+  currentHealth: 0
+  isPlaced: 0
   projectile: {fileID: 6846731686558122063, guid: b85e64145855e59439258e02444e9f4d, type: 3}
   fireRate: 2
   fireTimer: 0
@@ -110,9 +113,6 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  health: 5
-  currentHealth: 0
-  isPlaced: 0
 --- !u!58 &-1896137880979394530
 CircleCollider2D:
   m_ObjectHideFlags: 0
