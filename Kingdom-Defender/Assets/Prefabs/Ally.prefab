@@ -105,6 +105,7 @@ MonoBehaviour:
   health: 5
   currentHealth: 0
   isPlaced: 0
+  cost: 100
   projectile: {fileID: 6846731686558122063, guid: b85e64145855e59439258e02444e9f4d, type: 3}
   fireRate: 2
   fireTimer: 0

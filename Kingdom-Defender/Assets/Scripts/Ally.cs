@@ -7,6 +7,8 @@ public class Ally : MonoBehaviour
     public float currentHealth;
     public bool isPlaced = false;
 
+    public int cost;
+
     protected virtual void Start()
     {
         currentHealth = health;

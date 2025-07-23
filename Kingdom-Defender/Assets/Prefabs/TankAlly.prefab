@@ -105,6 +105,7 @@ MonoBehaviour:
   health: 50
   currentHealth: 0
   isPlaced: 0
+  cost: 50
 --- !u!58 &-1896137880979394530
 CircleCollider2D:
   m_ObjectHideFlags: 0
