@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RcvButtonGoback : BtnAbstract<ResetCtrl>
+public class RcvButtonGoback : BtnLoadParenAbstract<ResetCtrl>
 {
     protected override void OnClick()
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BtnClossSoundUI : BtnAbstract<SoundUI>
+public class BtnClossSoundUI : BtnLoadParenAbstract<SoundUI>
 {
     protected override void OnClick()
     {

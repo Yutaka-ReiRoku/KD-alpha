@@ -10,6 +10,6 @@ public class BtnStart : BtnMenuAbstract
     }
     protected virtual void OnStart()
     {
-        MenuManager.Instance.LoadScene(NameScene.GamePlay);
+        GameManager.Instance.LoadScene(NameScene.GamePlay);
     }
 }

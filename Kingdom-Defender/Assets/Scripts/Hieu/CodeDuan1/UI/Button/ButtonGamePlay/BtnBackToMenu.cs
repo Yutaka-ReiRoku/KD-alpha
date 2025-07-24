@@ -11,6 +11,6 @@ public class BtnHome : BtnMenuAbstract
     }
     protected virtual void LoadSceneGame()
     {
-        MenuManager.Instance.LoadScene(NameScene.MainMenu);
+        GameManager.Instance.LoadScene(NameScene.MainMenu);
     }
 }

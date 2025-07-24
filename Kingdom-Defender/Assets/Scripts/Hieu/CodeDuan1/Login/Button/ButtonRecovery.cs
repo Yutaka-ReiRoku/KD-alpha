@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonRecovery : BtnAbstract<ResetCtrl>
+public class ButtonRecovery : BtnLoadParenAbstract<ResetCtrl>
 {
     protected override void OnClick()
     {        

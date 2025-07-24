@@ -11,6 +11,6 @@ public class BtnReset : BtnMenuAbstract
     }
     protected virtual void ResetGame()
     {
-        MenuManager.Instance.LoadScene(NameScene.GamePlay);
+        GameManager.Instance.LoadScene(NameScene.GamePlay);
     }
 }

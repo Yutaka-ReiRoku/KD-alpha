@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ButtonLogin : BtnAbstract<LoginHolderCtrl>
+public class ButtonLogin : BtnLoadParenAbstract<LoginHolderCtrl>
 {
     protected override void OnClick()
     {        

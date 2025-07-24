@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RgButtonGoback : BtnAbstract<RegisterHolderCtrl>
+public class RgButtonGoback : BtnLoadParenAbstract<RegisterHolderCtrl>
 {
     protected override void OnClick()
     {

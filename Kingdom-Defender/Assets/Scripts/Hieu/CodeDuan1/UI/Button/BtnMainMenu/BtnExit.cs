@@ -10,6 +10,6 @@ public class BtnExit : BtnMenuAbstract
     }
     protected virtual void ExitGame()
     {
-        MenuManager.Instance.ExitGame();
+        GameManager.Instance.ExitGame();
     }
 }

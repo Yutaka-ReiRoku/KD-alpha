@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonGoRegister : BtnAbstract<LoginHolderCtrl>
+public class ButtonGoRegister : BtnLoadParenAbstract<LoginHolderCtrl>
 {
     protected override void OnClick()
     {

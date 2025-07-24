@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BtnClossPauseUI : BtnAbstract<PauseUI>
+public class BtnClossPauseUI : BtnLoadParenAbstract<PauseUI>
 {
     protected override void OnClick()
     {

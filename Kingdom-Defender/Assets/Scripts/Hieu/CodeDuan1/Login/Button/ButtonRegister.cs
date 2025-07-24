@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonRegister : BtnAbstract<RegisterHolderCtrl>
+public class ButtonRegister : BtnLoadParenAbstract<RegisterHolderCtrl>
 {
     protected override void OnClick()
     {        

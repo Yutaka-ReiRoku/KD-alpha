@@ -31,7 +31,7 @@ public class LoginUser : HieuMonoBehaviour
     {
         HolderLoginUI.Instance.MessageText("Login");
         Debug.Log("succsess");
-        MenuManager.Instance.LoadScene(NameScene.MainMenu);
+        GameManager.Instance.LoadScene(NameScene.MainMenu);
     }
     public string EmailUser(string emailUser)
     {

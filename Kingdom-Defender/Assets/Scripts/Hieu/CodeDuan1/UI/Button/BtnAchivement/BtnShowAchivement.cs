@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BtnShowAchivement : BtnAbstract<AchivementHolder>
+public class BtnShowAchivement : BtnLoadParenAbstract<AchivementHolder>
 {
     protected override void OnClick()
     {        

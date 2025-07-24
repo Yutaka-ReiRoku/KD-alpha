@@ -17,12 +17,12 @@ public class BtnPause : BtnMenuAbstract
     }
     protected override void OnClick()
     {
-        this.PauseGame();
-        this.ShowUI();
+        this.PauseGame();        
+        this.pauseUI.Toggle();
     }
     protected virtual void PauseGame()
     {
-        MenuManager.Instance.PauseGame();
+        GameManager.Instance.PauseGame();
     }
     protected virtual void ShowUI()
     {

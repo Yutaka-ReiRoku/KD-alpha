@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BtnResume : BtnAbstract<PauseUI>
+public class BtnResume : BtnLoadParenAbstract<PauseUI>
 {
     protected override void OnClick()
     {
@@ -10,7 +10,7 @@ public class BtnResume : BtnAbstract<PauseUI>
     }
     protected virtual void ResumeGame()
     {
-        MenuManager.Instance.ResumeGame();
+        GameManager.Instance.ResumeGame();
         this.parentCtrl.Hide();
     }
 }
