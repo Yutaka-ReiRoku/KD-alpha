@@ -102,9 +102,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7144c53897cdbd4ca5e07746702da2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  health: 3
+  speed: 0.3
+  health: 5
   currentHealth: 0
+  damage: 1
+  attackRate: 1
+  attackTimer: 0
+  isAttacking: 0
+  ally: {fileID: 0}
+  safeZoneCollider: {fileID: 0}
 --- !u!58 &7555718941932160026
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,22 +1,35 @@
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class Ally : MonoBehaviour
 {
-    public Detector currentDetector;
-    public GameObject projectile;
-    public float fireRate;
-    public float fireCooldown;
+    public float health;
+    public float currentHealth;
     public bool isPlaced = false;
 
-    void Update()
+    public int cost;
+
+    protected virtual void Start()
     {
-        if (fireCooldown > 0f) fireCooldown -= Time.deltaTime;
+        currentHealth = health;
     }
 
-    public void Shoot()
+    protected virtual void Update()
     {
-        if (fireCooldown > 0f || !isPlaced) return;
-        fireCooldown = 1f / fireRate;
-        Instantiate(projectile, transform.position, Quaternion.identity);
+
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }

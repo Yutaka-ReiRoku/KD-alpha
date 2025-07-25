@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5734674712342800872}
   - component: {fileID: 177763539004091016}
-  - component: {fileID: -1440625378205846623}
+  - component: {fileID: 1356469413127669016}
   - component: {fileID: -1896137880979394530}
   - component: {fileID: 7086772825393893451}
   m_Layer: 6
-  m_Name: Ally
+  m_Name: TankAlly
   m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.14819956, a: 1}
+  m_Color: {r: 0, g: 0.87870646, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1440625378205846623
+--- !u!114 &1356469413127669016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,21 +99,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1413940409423723474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ed46f65153959440a5bdd4d8de55868, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b34023e9edef7246a906b8039f52055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 50
   currentHealth: 0
   isPlaced: 0
-  cost: 100
-  projectile: {fileID: 6846731686558122063, guid: b85e64145855e59439258e02444e9f4d, type: 3}
-  fireRate: 2
-  fireTimer: 0
-  raycastDistance: 11
-  safeZoneCollider: {fileID: 0}
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  cost: 50
 --- !u!58 &-1896137880979394530
 CircleCollider2D:
   m_ObjectHideFlags: 0

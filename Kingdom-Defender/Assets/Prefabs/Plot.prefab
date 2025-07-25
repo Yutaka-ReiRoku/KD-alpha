@@ -147,5 +147,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726b3d1c98e80cd42893d5cf3292c45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ally: {fileID: 1413940409423723474, guid: 68908164471341d4680a6b25e374d262, type: 3}
+  ally: {fileID: 0}
   isOccupied: 0
